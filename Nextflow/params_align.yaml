@@ -1,0 +1,13 @@
+## nput data and prefix ##
+fq1: 'f1.fq.gz'
+fq2:  'f2.fq.gz'
+SAMPLEID: 'test'
+outdir: 'results_align'
+
+## Reference results ##
+RSEMINDEX: '/data/projects/RDconnect/analysis/alignmnent_quant/indexes/indexes'
+STARINDEX: '/data/projects/RDconnect/analysis/alignmnent_quant/indexes'
+ref: '/data/resources/fasta/hg19/h37d5/hsapiens.hs37d5.fasta'
+ref_fai: '/data/resources/fasta/hg19/h37d5/hsapiens.hs37d5.fasta.fai'
+ref_dict: '/data/resources/fasta/hg19/h37d5/hsapiens.hs37d5.dict'
+

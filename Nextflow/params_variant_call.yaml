@@ -1,0 +1,25 @@
+## Input data and prefix ##
+bam: "tmp.bam"
+bai: "tmp.bai"
+outdir : "results"
+SAMPLEID: "SampleID"
+RGLB: 'library'
+RGPL: 'platform'
+RGPU: 'machine'
+
+## Overall reference resources
+ref: "/data/resources/fasta/hg19/h37d5/hsapiens.hs37d5.fasta"
+ref_fai: "/data/resources/fasta/hg19/h37d5/hsapiens.hs37d5.fasta.fai"
+ref_dict: "/data/resources/fasta/hg19/h37d5/hsapiens.hs37d5.dict"
+DBSNP: "/home/mbosio/software/GATK/GATK_3.6.0/resources/dbsnp_138.hg19.snps.vcf"
+DBINDEL: "/home/mbosio/software/GATK/GATK_3.6.0/resources/dbsnp_138.hg19.indels.vcf"
+
+## paths to tools
+GATK: "/home/mbosio/software/GATK/GATK_3.6.0/GenomeAnalysisTK.jar"
+GATK: "/usr/GenomeAnalysisTK.jar"
+PICARD: "/home/mbosio/software/Picard/picard.jar"
+PICARD: "/usr/picard/picard.jar"
+# Path to SmartRNASeqCaller
+# code_path: "/home/mbosio/projects/RD_connect_rnaseq/"
+code_path: "/opt/RD_connect_rnaseq/"
+

@@ -217,8 +217,10 @@ process IndelRealign {
 				file( "Step5_out.bam") into step5_bam
 
     script:
-    """
-     java -jar $params.GATK \
+    
+     gbmem = "${task.memory.toGiga()}g"
+     """
+     java -Xmx${gbmem} -jar $params.GATK \
       -T BaseRecalibrator \
       -nct $task.cpus \
       --default_platform illumina \

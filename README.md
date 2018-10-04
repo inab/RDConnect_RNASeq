@@ -4,7 +4,7 @@
 ## Step 1 : Alignment
 From fastq files for paired end files will run 
 -  STAR 2.5.3a to generate alignment to genome and transcriptome
--  RSEM xxxxx to quantify gene and isoform usage 
+-  RSEM 1.3.0 to quantify gene and isoform usage 
 
 It requires to have previously generated STAR indexes apt for the task.
 Same goes for RSEM indexes. Both folders are to be added as input for the call
@@ -25,8 +25,10 @@ We require also that the reference fasta file is processed as by GATK requiremen
 ## Step 2: Variant Calling
 
  -This step starts from the aligned bam file to the genome and produces:
-    
-
+   - Requires:
+     - GATK 3.6.0
+     - Picard 2.18.2
+     - Tabix 0.2.5
  - One processed bam file (with adjusted scores, duplicate removed,   
    etc.)   
  - One gVCF file with all variants and non variant sites
@@ -37,7 +39,7 @@ Example:
 
 
     sh rd_connect_rna_call.sh \
-         -b : my_bam.bam \
+        -b : my_bam.bam \
         -r : reference file \
         -s : sample id \
         -n : CPUS \

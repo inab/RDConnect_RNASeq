@@ -264,9 +264,10 @@ step5_bam.into{step5_bam_1;step5_bam_2;step5_bam_3 }
     output:
 				file( "Step6_out.g.vcf") into step6_vcf
 
-    script:    
-    """
+    script:
     gbmem = "${task.memory.toGiga()}g"
+    """
+    
     java -Xmx${gbmem} -jar $params.GATK \
      -T HaplotypeCaller \
         -R $fasta_ref5 \

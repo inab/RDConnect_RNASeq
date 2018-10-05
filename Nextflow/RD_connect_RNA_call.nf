@@ -17,7 +17,6 @@
 
 
 
-OUTPREFIX = params.OUTPREFIX
 log.info """
          
                    P I P E L I N E    
@@ -321,7 +320,7 @@ step5_bam.into{step5_bam_1;step5_bam_2;step5_bam_3 }
          --GVCFGQBands 90 \
          --GVCFGQBands 99 \
          --standard_min_confidence_threshold_for_calling 30 \
-         --standard_min_confidence_threshold_for_emitting 10 
+         --standard_min_confidence_threshold_for_emitting 10
 
     """
     
@@ -342,7 +341,7 @@ step5_bam.into{step5_bam_1;step5_bam_2;step5_bam_3 }
     script:
     """
       bgzip $vcf_in
-      tabix $vcf_in".gz"
+      tabix -p vcf $vcf_in".gz"
     """
  }
  
